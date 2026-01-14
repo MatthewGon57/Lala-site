@@ -1,0 +1,133 @@
+:root{
+/* Main page background (dark blue-gray) */
+  --bg: #0f172a;
+/* Card/section background – very dark blue, almost black */
+  --card: #0b1224;
+/* Main text color – soft light gray (easy on the eyes) */
+  --text: #e5e7eb;
+/* Secondary text – muted gray for captions and less important info */
+  --muted: #a1a1aa;
+/* Accent color – warm beige / light gold for highlights */
+  --accent: #d4b996;
+/* Subtle border – transparent white for soft separation */
+  --border: rgba(255,255,255,0.08);
+}
+
+*{ box-sizing: border-box; }
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 700px at 30% -10%, rgba(212,185,150,0.22), transparent),
+              radial-gradient(900px 600px at 90% 0%, rgba(99,102,241,0.18), transparent),
+              var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.hero{
+  padding: 64px 16px 40px;
+  border-bottom: 1px solid var(--border);
+}
+.hero-inner{
+  max-width: 900px;
+  margin: 0 auto;
+}
+h1{
+  margin: 0 0 6px;
+  font-size: clamp(32px, 5vw, 52px);
+  letter-spacing: 0.3px;
+}
+.dates{
+  margin: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+.tagline{
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.container{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 60px;
+}
+
+.card{
+  background: rgba(11,18,36,0.72);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px 18px;
+  margin: 16px 0;
+  backdrop-filter: blur(6px);
+}
+
+h2{
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.timeline{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.timeline li{
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(255,255,255,0.12);
+}
+.timeline li:last-child{ border-bottom: none; }
+.year{
+  display: inline-block;
+  min-width: 64px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+}
+figure{
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.18);
+}
+img{
+  width: 100%;
+  display: block;
+  height: 240px;
+  object-fit: cover;
+}
+figcaption{
+  padding: 10px 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+blockquote{
+  margin: 12px 0 0;
+  padding: 12px 14px;
+  border-left: 3px solid var(--accent);
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+}
+blockquote footer{
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.note{
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.footer{
+  margin-top: 26px;
+  color: var(--muted);
+  text-align: center;
+}
